@@ -1,0 +1,25 @@
+name: Test Email-Step Workflow
+
+on:
+  push:
+    branches:
+      - main      # or whichever branch you want to watch
+  workflow_dispatch:   # allows manual trigger from the Actions UI
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js  # or any setup relevant to your project
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: 24f1002285@ds.study.iitm.ac.in
+        run: |
+          echo "Hello, world!"
+          echo "This step name includes the required email address."
